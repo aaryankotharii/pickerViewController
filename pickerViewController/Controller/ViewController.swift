@@ -17,9 +17,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var pickerView: UIPickerView!
     
     //Variables
-    var countries = [String]()
-    var Latitudes = [Double]()
-    var Longitudes = [Double]()
+   // var countries = [String]()
+  //  var Latitudes = [Double]()
+    //var Longitudes = [Double]()
     var lat = Double()
     var lon = Double()
     var country = String()
@@ -30,8 +30,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
     super.viewDidLoad()
         
-    setNavigationBarProperties()
-
     pickerView.dataSource = self
         
     pickerView.delegate = self
@@ -50,7 +48,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         return 1
      }
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return count-1
+        return countries.count
     }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return countries[row]
@@ -84,23 +82,5 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
         vc?.country = country
         }
-    
-    
-    
-    //Customise Navigation Bar
-    func setNavigationBarProperties(){
-        self.navigationController?.navigationBar.barTintColor = UIColor(displayP3Red: 200/255, green: 240/255, blue: 230/255, alpha: 1.0)
-        self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
-        self.navigationController?.navigationBar.backIndicatorImage = UIImage(named: "backButton")
-        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = UIImage(named: "backButton")
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: UIBarButtonItem.Style.plain, target: nil, action: nil)
-    }
-    
-    
-    @IBAction func go(_ sender: Any) {
-        DispatchQueue.main.async {
-            self.pickerView.reloadAllComponents()
-        }
-    }
 }
 

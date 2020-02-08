@@ -55,9 +55,6 @@
 		5B02EE8A23ED43D6002E6A69 = {
 			isa = PBXGroup;
 			children = (
-				5B39A5DC23EE882600C5F63F /* tblViewController.swift */,
-				5B39A5DA23EE871500C5F63F /* TableViewCell.swift */,
-				5B39A5D823EE823600C5F63F /* chooseViewController.swift */,
 				5B39A5B223EDF38300C5F63F /* idk */,
 				5B02EE9523ED43D6002E6A69 /* pickerViewController */,
 				F1EDBA668B9B4E427EDB1BA5 /* Pods */,
@@ -79,8 +76,8 @@
 			children = (
 				5B02EE9623ED43D6002E6A69 /* AppDelegate.swift */,
 				5B02EE9823ED43D6002E6A69 /* SceneDelegate.swift */,
-				5B02EE9A23ED43D6002E6A69 /* ViewController.swift */,
-				5B39A5B023EDE17C00C5F63F /* mapViewController.swift */,
+				5B39A5FE23EE997F00C5F63F /* Controller */,
+				5B39A5FF23EE998D00C5F63F /* View */,
 				5B02EE9423ED43D6002E6A69 /* Products */,
 				5B02EE9C23ED43D6002E6A69 /* Main.storyboard */,
 				5B02EE9F23ED43DB002E6A69 /* Assets.xcassets */,
@@ -88,6 +85,25 @@
 				5B02EEA423ED43DB002E6A69 /* Info.plist */,
 			);
 			path = pickerViewController;
+			sourceTree = "<group>";
+		};
+		5B39A5FE23EE997F00C5F63F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B39A5D823EE823600C5F63F /* chooseViewController.swift */,
+				5B02EE9A23ED43D6002E6A69 /* ViewController.swift */,
+				5B39A5B023EDE17C00C5F63F /* mapViewController.swift */,
+				5B39A5DC23EE882600C5F63F /* tblViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5B39A5FF23EE998D00C5F63F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5B39A5DA23EE871500C5F63F /* TableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		6E3FD49745BC4EA4DCAD07AC /* Frameworks */ = {

@@ -26,9 +26,12 @@ class chooseViewController: UIViewController {
     var count = Int()
 
     override func viewDidLoad() {
-        super.viewDidLoad()
         
-        getData(url: "https://restcountries.eu/rest/v2/all")
+    super.viewDidLoad()
+    
+    setNavigationBarProperties()
+    
+    getData(url: "https://restcountries.eu/rest/v2/all")
     }
     
     
@@ -79,11 +82,11 @@ class chooseViewController: UIViewController {
         
         vc?.country = country
         
-        vc?.countries = countries
+        //vc?.countries = countries
         
-        vc?.Latitudes = Latitudes
+        //vc?.Latitudes = Latitudes
         
-        vc?.Longitudes = Longitudes
+        //vc?.Longitudes = Longitudes
                 
         self.navigationController?.pushViewController(vc!, animated: true)
     }
@@ -109,6 +112,17 @@ class chooseViewController: UIViewController {
                  
         //  self.navigationController?.pushViewController(vc!, animated: true)
     }
+    
+    
+    //Customise Navigation Bar
+    func setNavigationBarProperties(){
+        self.navigationController?.navigationBar.barTintColor = UIColor(displayP3Red: 200/255, green: 240/255, blue: 230/255, alpha: 1.0)
+        self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
+        self.navigationController?.navigationBar.backIndicatorImage = UIImage(named: "backButton")
+        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = UIImage(named: "backButton")
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: UIBarButtonItem.Style.plain, target: nil, action: nil)
+    }
+    
     
     
     

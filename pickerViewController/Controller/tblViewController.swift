@@ -10,25 +10,18 @@ import UIKit
 
 class tblViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
 
-    
-
     @IBOutlet weak var tableView: UITableView!
-    
-    
+
      // var countries = [String]()
      // var Latitudes = [Double]()
-    //var Longitudes = [Double]()
+     //var Longitudes = [Double]()
       var lat = Double()
       var lon = Double()
       var country = String()
-      var count = Int()
         
-
-    var abc = ["A","B","C"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(imgCodes)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -45,6 +38,7 @@ class tblViewController: UIViewController, UITableViewDelegate, UITableViewDataS
 //        countries = vc!.countries
         
         cell?.countryLabel.text = countries[indexPath.row]
+        
         cell?.countryImage.image = UIImage(named: imgCodes[indexPath.row])
         
         return cell!
@@ -77,17 +71,4 @@ class tblViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         
         vc?.country = country
 }
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
